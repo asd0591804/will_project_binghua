@@ -1,0 +1,5 @@
+<article class="post" id="post{{idx}}" *ngFor="let article of articles; let idx = index">
+    <app-article-header [articles]="article" (delete)="onDelete($event)" (changeTitle)="onChangeTheTitle($event)"></app-article-header>
+    <!-- {article.id,article.title} -->
+    <app-article-body [articles]="article"></app-article-body>
+  </article>
