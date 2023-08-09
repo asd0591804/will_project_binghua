@@ -12,7 +12,7 @@
       <span class="post-author"><i class="glyphicon glyphicon-user"></i><a href="http://blog.miniasp.com/author/will.aspx">{{ articles.author }}</a></span>
       <span class="post-category"><i class="glyphicon glyphicon-folder-close"></i><a [href]="articles['categoryLink']">{{ articles.category }}</a></span>
       <span>
-        <button (click)="onDeleteArtical()">delete.</button>
+        <button (click)="onDeleteArticle()">刪除</button>
         <button *ngIf="!isEdit" (click)="isEdit=true">編輯文章</button>
         <button *ngIf="isEdit" (click)="isEdit=false">取消編輯</button>
       </span>

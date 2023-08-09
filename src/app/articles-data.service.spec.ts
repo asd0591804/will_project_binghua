@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ArticleDataService } from './articlesData.service';
+import { ArticleDataService } from './articles-data.service';
 
 describe('DataService', () => {
   let service: ArticleDataService;
