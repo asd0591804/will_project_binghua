@@ -14,7 +14,7 @@ import { Article } from './article.interface';
 })
 export class ArticleComponent {
   articles: Article[] = [];
-  articleService = inject(ArticleDataService)
+  articleService = inject(ArticleDataService);
 
   ngOnInit() {
     this.articleService.getData().subscribe(a => this.articles = a);

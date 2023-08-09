@@ -17,7 +17,7 @@ export class HeaderComponent {
   ngOnInit(): void {}
 
   getStyle(){
-    return {'font-size':(12 + this.counter) + 'px'}
+    return {'font-size':(12 + this.counter) + 'px'};
   }
 
   changeTitle(altKey: boolean) {

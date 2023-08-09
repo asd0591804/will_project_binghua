@@ -24,12 +24,12 @@ export class ArticleHeaderComponent implements OnInit{
   newTitle = '';
 
   onDelete(){
-    this.delete.emit(this.articles.id)
+    this.delete.emit(this.articles.id);
   }
 
   onUpdateTitle(title:string){
-    this.newTitle = title
-    this.updateTitle.emit({id:this.articles.id,title:title})
+    this.newTitle = title;
+    this.updateTitle.emit({id:this.articles.id,title:title});
   }
 
   ngOnInit(){

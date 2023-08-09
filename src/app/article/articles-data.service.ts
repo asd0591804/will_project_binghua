@@ -18,7 +18,7 @@ export class ArticleDataService {
   }
 
   getData() : Observable<Article[]>{
-    return this.http.get<Article[]>('http://localhost:3000/articles')
+    return this.http.get<Article[]>('http://localhost:3000/articles');
   }
 
 }
