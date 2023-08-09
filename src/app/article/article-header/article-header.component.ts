@@ -18,7 +18,7 @@ export class ArticleHeaderComponent implements OnInit{
   delete = new EventEmitter<number>();
 
   @Output()
-  changeTitle = new EventEmitter<{id: number, title: string}>();
+  updateTitle = new EventEmitter<{id: number, title: string}>();
 
   isEdit = false;
   newTitle = '';
@@ -29,7 +29,7 @@ export class ArticleHeaderComponent implements OnInit{
 
   onUpdateTitle(title:string){
     this.newTitle = title
-    this.changeTitle.emit({id:this.articles.id,title:title})
+    this.updateTitle.emit({id:this.articles.id,title:title})
   }
 
   ngOnInit(){

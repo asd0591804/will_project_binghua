@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { ArticleBodyComponent } from './article-body/article-body.component';
 import { ArticleHeaderComponent } from './article-header/article-header.component';
