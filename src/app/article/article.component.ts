@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { ArticleBodyComponent } from './article-body/article-body.component';
 import { ArticleHeaderComponent } from './article-header/article-header.component';
-import { ArticleDataService } from '../articles-data.service';
+import { ArticleDataService } from './articles-data.service';
 import { Article } from './article.interface';
 
 @Component({
@@ -17,7 +17,7 @@ export class ArticleComponent {
   articleService = inject(ArticleDataService)
 
   ngOnInit() {
-    this.articleService.getData().subscribe(result => this.articles = result);
+    this.articleService.getData().subscribe(a => this.articles = a);
   }
 
   onDelete(id: number) {
@@ -25,14 +25,14 @@ export class ArticleComponent {
     this.articleService.delete(id).subscribe(a => { }, error => console.log(error));
   }
 
-  onChangeTheTitle(articleNew:{id:number,title:string}) {
+  onUpdateTitle(articleNew:{id:number,title:string}) {
     this.articles = this.articles.map((article:Article) => {
       if (article.id === articleNew.id) {
         return Object.assign({}, article, articleNew);
       }
       return article;
     })
-    this.articleService.changeTitle(articleNew).subscribe(a => { }, error => console.log(error));
+    this.articleService.updataTitle(articleNew).subscribe(a => { }, error => console.log(error));
   }
 
 }

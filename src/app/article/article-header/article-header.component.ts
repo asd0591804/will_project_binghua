@@ -23,11 +23,11 @@ export class ArticleHeaderComponent implements OnInit{
   isEdit = false;
   newTitle = '';
 
-  onDeleteArticle(){
+  onDelete(){
     this.delete.emit(this.articles.id)
   }
 
-  onEdit(title:string){
+  onUpdateTitle(title:string){
     this.newTitle = title
     this.changeTitle.emit({id:this.articles.id,title:title})
   }
