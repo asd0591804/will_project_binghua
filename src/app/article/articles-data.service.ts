@@ -11,10 +11,10 @@ export class ArticleDataService {
   constructor(private http:HttpClient) {
   }
   delete(id: number){
-    return this.http.delete('http://localhost:3000/articles'+'{id}');
+    return this.http.delete(`http://localhost:3000/articles/${id}`);
   }
-  updataTitle(article:{id: number, title: string}){
-    return this.http.put('http://localhost:3000/articles'+'test',article);
+  updateTitle(article:{id: number, title: string}){
+    return this.http.put(`http://localhost:3000/articles/${article.title}`,article);
   }
 
   getData() : Observable<Article[]>{

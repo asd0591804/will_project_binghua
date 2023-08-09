@@ -32,7 +32,7 @@ export class ArticleComponent {
       }
       return article;
     })
-    this.articleService.updataTitle(articleNew).subscribe(a => { }, error => console.log(error));
+    this.articleService.updateTitle(articleNew).subscribe(a => { }, error => console.log(error));
   }
 
 }
