@@ -29,7 +29,7 @@ export class ArticleComponent {
     this.articles = this.articles.map((article:Article) => {
       if (article.id === articleNew.id) {
         return Object.assign({}, article, articleNew);
-      }
+      };
       return article;
     })
     this.articleService.updateTitle(articleNew).subscribe(a => { }, error => console.log(error));
